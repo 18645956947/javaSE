@@ -1,4 +1,4 @@
-package thread.thread.threadBank_withdrawal_demo_03;
+package thread.threadBank_withdrawal_demo_03;
 
 import java.util.concurrent.locks.ReentrantLock;
 

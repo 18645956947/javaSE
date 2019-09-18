@@ -1,9 +1,11 @@
-package thread.thread.threadBank_withdrawal_demo_03;
+package thread.threadBank_withdrawal_demo_03;
+
+import thread.thread.threadBank_withdrawal_demo_03.Account;
 
 public class DrawThread extends Thread{
 
     //模拟用户账户
-    private Account account;
+    private thread.thread.threadBank_withdrawal_demo_03.Account account;
     //当前取钱线程希望取的钱数
     private double drawAmount;
     public DrawThread(){}
