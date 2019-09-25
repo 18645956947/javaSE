@@ -45,7 +45,7 @@ public class MyContainer3 {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-				}
+			}
 			System.out.println("t2结束");
 			}
 		}," t2").start();
@@ -60,7 +60,6 @@ public class MyContainer3 {
 					if (c.size() == 5) {
 						lock.notify();
 					}
-					
 					try {
 						TimeUnit.SECONDS.sleep(1);
 					} catch (Exception e) {
