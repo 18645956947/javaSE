@@ -58,11 +58,11 @@ public class MyContainer1 <T>{
 			}, "c" + i).start();
 		}
 		
-		try {
+		/*try {
 			TimeUnit.SECONDS.sleep(2);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		}
+		}*/
 		
 		//启动生产者线程
 		for (int i = 0; i < 2; i++) {
