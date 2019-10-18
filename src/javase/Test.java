@@ -6,6 +6,5 @@ public class Test {
         User u = new User();
         int i = 10;
         u.name = "jack";
-
     }
 }
