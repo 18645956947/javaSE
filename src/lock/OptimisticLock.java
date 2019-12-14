@@ -1,6 +1,7 @@
 package lock;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.locks.Lock;
@@ -11,21 +12,18 @@ import java.util.concurrent.locks.Lock;
 public class OptimisticLock {
     public int data = 123;
     boolean flag = true;
-    public void setData(int newData){
-        while (flag){
+    public void setData(int newData) {
+        while (flag) {
             int oldDate = data;
             newData = newData + 1;
 
             //下面的就是CAS操作
-            if(data == oldDate){
+            if (data == oldDate) {
                 data = newData;
                 flag = false;
-            }else{
+            } else {
                 //啥也不干，再次循环  直到满足
             }
         }
     }
-
-    List a = new LinkedList<>();
-    List b = new ArrayList();
 }
