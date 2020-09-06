@@ -7,16 +7,10 @@ import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Main {
-    private volatile static Main m;
-    private Main(){}
-    public static Main getM(){
-        if(m == null){
-            synchronized (Main.class){
-                if(m == null){
-                    m = new Main();
-                }
-            }
+    public static void main(String[] args) {
+       MyThread myThread = new MyThread();
+        for (int i = 0; i < 10; i++) {
+            new Thread(myThread, i + "-thread").start();
         }
-        return m;
     }
 }
